@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<header>
+    <div class="apresentacao">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="~/imagensite/estocolmo.jpg"> <!-- imagem estocolmo -->
+                    <div class="caption center-align">
+                        <h3>4Travel</h3>
+                        <h5 class="light grey-text text-lighten-3">Ajudando a escolher seu destino!</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/imagensite/tailandia.jpg"> <!-- imagem tailandia -->
+                    <div class="caption left-align">
+                        <h3>4Travel</h3>
+                        <h5 class="light grey-text text-lighten-3">Ajudando a escolher seu destino!</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/imagensite/kenaialaska.jpg"> <!-- imagem alaska -->
+                    <div class="caption center-align">
+                        <h3>4Travel</h3>
+                        <h5 class="light grey-text text-lighten-3">Ajudando a escolher seu destino!</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/imagensite/borabora.jpg"> <!-- imagem bora bora  -->
+                    <div class="caption right-align">
+                        <h3>4Travel</h3>
+                        <h5 class="light grey-text text-lighten-3">Ajudando a escolher seu destino!</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+<section>
+
+    <!-- breadcrumbs-->
+    <nav>
+        <div class="nav-wrapper" id="breadcrumb">
+            <div class="col s12 m12 l12">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb"})
+            </div>
+        </div>
+    </nav>
+
+    <!-- cards como menu. foto com legenda sobre resumo da página-->
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="~/Midia/Destinos_Nacionais/DestinosNacionais.jpg" />
+                    </div>
+                    <div class="card-content">
+                        <p>O nosso Brasil é um país muito lindo e tem várias paisagens bonitas para ser visitadas, clique e descubra os 10 melhores destinos brasileiros para conhecer nas férias.</p>
+                    </div>
+                    <div class="card-action">
+                        @Html.ActionLink("CLIQUE AQUI", "DestinosNacionais", "Home")
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="~/Midia/Destinos_Internacionais/DestinosInternacionais.jpg" />
+                    </div>
+                    <div class="card-content">
+                        <p>O mundo tem lugares lindos e países muito diferentes para ser descobertos e visitados, mas para onde ir entre todas as opções, clique e conheça os 10 melhores e mais bonitos lugares para se visitar.</p>
+                    </div>
+                    <div class="card-action">
+                        @Html.ActionLink("CLIQUE AQUI", "DestinosInternacionais", "Home")
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="~/Midia/Intercambio/bannerintercambio.jpg" />
+                    </div>
+                    <div class="card-content">
+                        <p>O intercâmbio é uma experiência única, porém ainda existem muitas dúvidas de como é, onde ir, e os tipos, entre aqui e confira os principais tipos, os lugares e algumas dicas.</p>
+                    </div>
+                    <div class="card-action">
+                        @Html.ActionLink("CLIQUE AQUI", "IntercambioEscolha", "Home")
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Slider -->  
+ </section>
+
+@section JS {
+    <script>
+          $(document).ready(function(){
+              $('.slider').slider();
+          //Sub- Menu: Não deu certo
+          $(".dropdown-button").dropdown();
+           });
+    </script>
+}

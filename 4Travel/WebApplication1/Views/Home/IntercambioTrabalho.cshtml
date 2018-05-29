@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Intercambio Trabalho";
+}
+<section>
+    <img id="bannertrabalho" src="~/Midia/Intercambio/bannertrabalho.jpg" style="width: 100%;"/>
+    <!--breadcrumbs-->
+    <nav>
+        <div class="caminho">
+            <div class="col s12">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Tipos de Intercâmbio", "IntercambioEscolha", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Trabalho", "IntercambioTrabalho", "Home", new { area = "" }, new { @class = "breadcrumb" })
+            </div>
+         </div>
+    </nav>
+    <div class="container">
+        <h2>Estudo & Trabalho</h2>
+
+        <p class="paragrafo">
+            Um intercâmbio de estudo e trabalho é uma ótima opção para quem quer estudar e aprimorar o inglês e ganhar uma grana enquanto aprende. Esse tipo de intercâmbio o estudante tem que ir em uma agência e tem a opção de ficar no país escolhido por 3 meses, 6 meses ou 1 ano. Alguns países só tem a opção de trabalho se o estudante ficar mais de 6 meses no país. O emprego normalmente é de 4 horas diárias, após a aula de inglês na parte da manhã. O quanto irá ganhar depende do país e do lugar que for trabalhar, mas normalmente os estudantes trabalham em bares, restaurantes ou pubs. Trabalho remunerado no  exterior é uma ótima experiência para aperfeiçoar a língua estrangeira, pois além do aprendizado em sala de aula é possível vivenciar situações reais do dia a dia e uma total imersão na cultura do país escolhido. Tudo isso torna a vivência em outro país única e valiosa.
+        </p>
+        <p class="paragrafo" style="font-weight: bold;">
+            Não são todos os países que fazem parte desse programa, os países que permitem o trabalho e estudo são:
+        </p>
+
+        <ul style="padding-left: 17%;">
+            <li>
+                <img class="bandeiras" src="~/Midia/Intercambio/iconecanada.png">
+                <img class="bandeiras" src="~/Midia/Intercambio/iconau.png">
+                <img class="bandeiras" src="~/Midia/Intercambio/iconenz.png">
+                <img class="bandeiras" src="~/Midia/Intercambio/iconeir.png">
+            </li>
+        </ul>
+
+        <p></p>
+
+        <p class="paragrafo">
+            A Irlanda é o países mais barato, porém por ser mais barato é mais difícil de conseguir um emprego, pois todos acabam indo para lá. Um país que é muito bom e tem bastante emprego é a Austrália, porém é mais caro, já que esse país fica do outro lado do mundo.
+            Para mais informações consulte os sites abaixo:
+        </p>
+
+
+        <div class="container">
+            <ul>
+                <li>
+                    <a target="blank" href="http://www.experimento.org.br/"><img id="logoexperimento" src="~/Midia/Intercambio/experimento.jpg"></a>
+                    <a target="blank" href="http://www.experimento.org.br/"><img img id="logoci" src="~/Midia/Intercambio/ci.png"></a>
+                </li>
+            </ul>
+
+            </p>
+        </div>
+       </div>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <script>
+          $(document).ready(function(){
+          $('.slider').slider();
+          $(".dropdown-button").dropdown();
+           });
+        </script>
+</section>
+

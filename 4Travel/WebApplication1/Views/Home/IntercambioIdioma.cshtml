@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Intercambio Idioma";
+}
+
+<section>
+
+    <div id="banneridioma">
+        <!-- imagem de destinos, banner -->
+        <img id="banneridioma" src="~/imagensite/cursos.png" style="width: 100%;"/ >
+    </div>
+    <!--breadcrumbs-->
+    <nav>
+        <div class="caminho" style="width: 100%; height: 100%;">
+            <div class="col s12 m10">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Tipos de Intercâmbio", "IntercambioEscolha", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Idioma", "IntercambioIdioma", "Home", new { area = "" }, new { @class = "breadcrumb" })
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Curso do Idioma</h2>
+
+        <p class ="paragrafo">
+            Estudar no exterior é uma viagem inesquecível que muda a vida do estudante para sempre. Há programas para todos, não importando a idade, o nível de conhecimento do idioma e formação profissional. A variedade de opções e possibilidades de adaptações com os objetivos de cada um faz deste um dos programas de intercâmbios mais procurados.
+        </pclass>
+
+        <h4>Tipos de Curso</h4>
+
+        <p class ="paragrafo">
+            Os cursos regulares são os programas voltados para a aprendizagem ou aperfeiçoamento do idioma, tendo cargas horárias que variam de 15h a 40h por semana. O curso de idiomas também podem ser combinado com aulas de interesses específicos como fotografia, dança, história da arte, entre outros. Destacamos, ainda, os cursos profissionalizantes, ideais para jovens recém-formados que desejam obter mais experiência em sua área de atuação e os cursos para executivos, que são programas mais curtos, geralmente de uma semana e que tem foco específico de acordo com a necessidade estudante.
+        </p>
+
+
+        <h4>Tipos de Acomodação</h4>
+
+        <p class ="paragrafo">
+            Cada destino oferece possibilidades diferentes em relação à acomodação. As mais procuradas são: casa de família, residências estudantis ou dormitórios, albergues, apartamentos, flats ou hotéis. Abaixo estão os prós e contras de morar em uma casa de família e prós e contras de morar em residência estudantil
+        </p>
+
+        <p class ="paragrafo">
+            <h6 class="pros">Prós</h6> <span class="proscontras">A principal vantagem de morar em uma casa de família é, sem dúvida, a imersão na cultura local. Você vai conhecer os hábitos, experimentar as comidas e vivenciar o dia a dia dos moradores. Além do mais, vai praticar o idioma fora da escola, “treinando os ouvidos” com nativos. Mesmo nas casas mais “desencanadas”, existem certasfacilidades à mão, como comida no prato e roupa lavada.</span>
+            <h6 class="contras">Contras</h6> <span class="proscontras"> As regras nas casas de família geralmente são mais rígidas e impostas pela família. Em algumas casas, por exemplo, há limite de horário para chegar e tarefas que devem ser realizadas, como limpar o quarto/banheiro e arrumar a cama. Não dá para levar amigos ou receber visitas sem consultar os moradores. Não é comum, mas na pior das hipóteses, você pode cair numa família não tão legal – o que vai exigir de você muito jogo de cintura!</span>
+        </p>
+
+        <p class ="paragrafo">
+            <h6 class="pros">Prós</h6><span class="proscontras"> A interação com estudantes de várias partes do mundo. Na residência estudantil, você terá contato com pessoas como você, que estão ali para estudar e se divertir. Será uma oportunidade de fazer amizades fora da sala de aula. É um ambiente que costuma ser um pouco maisdescontraído em relação à casa de família.</span>
+            <h6 class="contras">Contras</h6> <span class="proscontras">Na maioria das residências estudantis, é preciso compartilharbanheiro e/ou cozinha. Nesse caso, prepare-se para passar por alguns “perrengues” e ter mais atenção com seus objetos pessoais. Há o risco também de você morar ao lado de brasileiros – o que pode não ser bom se o seu objetivo é realmente aprender e praticar outro idioma. Ah, apesar de serem mais flexíveis, também existem regras impostas pela administração.</span>
+</p>
+
+        <div class="container">
+            <div class="w3-content w3-section" style="width: 40%; height: 40%; display: flex;">
+                <img class="mySlides" src="~/imagensite/exchange.jpg" style="width: 250%; height: 80%;">
+                <img class="mySlides" src="~/imagensite/homestay.jpg" style="width: 250%; height: 200%;">
+                <img class="mySlides" src="~/imagensite/acomodacaoestudantil.jpg" style="width: 250%; height: 200%;">
+                <img class="mySlides" src="~/imagensite/cursoidioma.jpg" style="width: 250%; height: 40%;">
+            </div>
+        </div>
+
+        <p>
+            Consulte os sites abaixo para mais informações:
+            <ul>
+                <li><a target="_blank" href="https://www.ie.com.br/intercambio/curso-idioma">IE</a></li>
+                <li><a target="_blank" href="https://www.stb.com.br/intercambio/idiomas?tipo=&curso=3&idade=&idioma=[]&pais=[]&cidade=[]&guide=&busca=true&continente=&duracao=[]&escolas=[]&page=1">STB</a></li>
+            </ul>
+        </p>
+
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+                    var myIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                           x[i].style.display = "none";
+                        }
+                        myIndex++;
+                        if (myIndex > x.length) {myIndex = 1}
+                        x[myIndex-1].style.display = "block";
+                        setTimeout(carousel, 3000); // Muda a cada 3 segundos
+                      }
+    </script>
+
+</section>

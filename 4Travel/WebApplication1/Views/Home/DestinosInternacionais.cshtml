@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplication1.Models.PublicacaoDestino>
+
+
+@{
+    ViewBag.Title = "Destinos Internacionais";
+}
+
+<section>
+    <img id="banner" src="~/Midia/Destinos_Internacionais/DestinosInternacionais.jpg" style="width: 100%;"/ >
+    <!--breadcrumbs-->
+    <nav>
+        <div class="caminho">
+            <div class="col s12 m12">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Destinos Internacionais", "DestinosInternacionais", "Home", new { area = "" }, new { @class = "breadcrumb" })
+            </div>
+        </div>
+    </nav>
+    <div>
+
+        @foreach (var p in Model)
+        {
+            <h4 class="titulos">@p.nomeEstado - @p.Pais.nome</h4>
+            <p class="textos-imagens">
+                @p.descricao
+            </p>
+            <div class="container">
+                <figure>
+                    <img class="responsive-img" src=@Url.Action( "Show", "Home", new { id = p.id, @class = "responsive-img" })/>
+                    <figcaption>@p.nomeCidade</figcaption>
+                </figure>
+            </div>
+        }
+
+    @using (Html.BeginForm("NovoDestino", "Home", new { id = 1 })){
+        <button type="submit" class="waves-effect waves-light btn"><i class="material-icons right">add</i>Novo Destino</button>
+    }
+    </div>
+</section>

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Intercambio HS";
+}
+
+<!-- CSS ADICIONAL PARA ESTILIZAÇÕES -->
+<link href="~/css/IntercambioEscolha.css" rel="stylesheet" type="text/css" />
+
+<h2 class="titulo">Tipos de Intercâmbio</h2>
+
+<div class="row">
+    <div class="col s7 push-s5">
+        <span class ="flow-text" id="intercambioTitle">HIGH SCHOOL</span> 
+            <p class="intercambioTexto">
+                O conhecimento adquirido neste tipo de intercâmbio ajuda o estudante a definir qual será sua profissão, oferecendo uma bagagem adicional em relação ao idioma praticado.
+            </p>
+            <a>@Html.ActionLink("SAIBA MAIS SOBRE O INTERCÂMBIO HIGH SCHOOL", "Intercambio", "Home", new { area = "" }, new { @class = "linkIntercambio" })</a>
+    </div>
+    <div class="col s5 pull-s7"><img src="~/Midia/Intercambio/bannerintercambio.jpg"/ style="width: 100%; height: 4%;"> </div>
+</div>
+
+<div class="row">
+    <div class="col s7 push-s5">
+        <span class="flow-text" id="intercambioTitle">IDIOMA</span> 
+        <p class="intercambioTexto">
+            O melhor caminho para aprender um idioma é "Praticando". Existem diversos cursos oferecidos no exterior para ajudar o aluno a atingir seus objetivos, sejam estes de idioma ou qualquer atividade que ajude o aluno a se relacionar com os gringos e consequentemente agregar valor ao seu conhecimento.
+        </p>
+        @Html.ActionLink("SAIBA MAIS SOBRE CURSO DE IDIOMA NO EXTERIOR", "IntercambioIdioma", "Home", new { area = "" }, new { @class = "linkIntercambio" })
+    </div>
+    <div class="col s5 pull-s7"><img src="~/imagensite/cursos.png"/ style="width: 100%; height: 4%;"> </div>
+</div>
+
+<div class="row">
+    <div class="col s7 push-s5"><span class="flow-text" id="intercambioTitle">TRABALHO</span> 
+        <p class="intercambioTexto">
+            Exercer uma função no exterior junto ao estudo é a melhor forma de aprender o idioma, entretanto são poucos os países que abrem as portas para estrangeiros.
+        </p>
+        <a>@Html.ActionLink("SAIBA MAIS SOBRE TRABALHO NO EXTERIOR", "IntercambioTrabalho", "Home", new { area = "" }, new { @class = "linkIntercambio" })</a>
+    </div>
+    <div class="col s5 pull-s7"><img src="~/Midia/Intercambio/bannertrabalho.jpg"/ style="width: 100%; height: 4%;"> </div>
+</div>
+
+
+

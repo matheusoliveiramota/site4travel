@@ -1,0 +1,109 @@
+﻿@model WebApplication1.Models.PublicacaoDestino
+
+@{
+    ViewBag.Title = "Novo Destino";
+}
+
+<img id="banner" src="~/Midia/novolugar.jpg" style="width: 100%;"/>
+
+@if (ViewBag.Id == 1)
+{
+    <nav>
+        <div class="caminho">
+            <div class="col s12">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Destinos Internacionais", "DestinosInternacionais", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Novo Destino", "NovoDestino", "Home", new { id = 1 }, new { @class = "breadcrumb" })
+            </div>
+        </div>
+    </nav>
+}
+@if (ViewBag.Id == 2)
+{
+    <nav>
+        <div class="caminho">
+            <div class="col s12">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Destinos Nacionais", "DestinosNacionais", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Novo Destino", "NovoDestino", "Home", new { id = 2 }, new { @class = "breadcrumb" })
+            </div>
+        </div>
+
+    </nav>
+}
+
+<form action="/Home/AdicionaPublicacao" method="post" enctype="multipart/form-data">
+    <!-- PAÍSES -->
+    <div class="form-group">
+        <div class="selectPaises">
+            <label class="novoDestinoPais">País</label>
+            <select name ="idPais" class="browser-default" required>
+                @foreach (var p in ViewBag.Paises)
+                {
+                    <option value="@p.id">@p.nome</option>
+                }
+            </select>
+        </div>
+      </div>
+       <!-- ESTADO -->
+        <div class="form-group">
+                <label class="novoDestinoEstadoCidade">Estado</label>
+            <div class="textoEstadoCidade">
+                <input placeholder="Digite o Nome do Estado" name="nomeEstado" type="text" class="validate" required>
+                @Html.ValidationMessage("estado")
+            </div>
+         </div>
+        <!-- CIDADE -->
+        <div class="form-group">
+            <label class="novoDestinoEstadoCidade">Cidade</label>
+            <div class="textoEstadoCidade">
+                <input placeholder="Digite o Nome da Cidade (em relação ao Destino ou à Imagem)" name="nomeCidade" type="text" class="validate" required>
+                @Html.ValidationMessage("cidade")
+            </div>
+        </div>
+        <!-- DESCRIÇÃO -->
+        <div class="form-group">
+            <label class="novoDestinoEstadoCidade">Descrição</label>
+            <div class="textoDescricao">
+                <textarea name="descricao" placeholder ="Descreva sobre o destino, informando as principais atrações e as características do local" id="textarea1" class="materialize-textarea" required></textarea>
+                @Html.ValidationMessage("descricao")
+            </div>
+        </div>
+
+        <!-- AUTOR -->
+        <div class="form-group">
+            <label class="novoDestinoEstadoCidade">Autor</label>
+            <div class="textoEstadoCidade">
+                <input placeholder="Digite o Nome do Autor" name="autor" type="text" class="validate" required>
+            </div>
+            @Html.ValidationMessage("autor")
+        </div>
+
+        <!-- IMAGEM -->
+        <div class="imagem">
+            <div class="row">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>IMAGEM</span>
+                        <input type="file" name="imagem" />
+                    </div>
+
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text"
+                               placeholder="Adicione uma imagem do destino" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="botaoEnviar">
+        <button type="submit" class="waves-effect waves-light btn green accent-3"><i class="material-icons right">check_circle</i>Salvar Destino</button>
+    </div>
+</form>
+<!-- AREA PARA JAVASCRIPT -->
+@section JS {
+    <script type="text/javascript"
+        src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+}

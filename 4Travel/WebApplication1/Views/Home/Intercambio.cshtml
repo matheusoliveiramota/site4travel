@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Intercambio";
+}
+
+<!--<link rel="stylesheet" type="text/css" href="css/Intercambio.css-->
+
+<section>
+    <img id="banner" src="~/Midia/Intercambio/bannerintercambio.jpg"/ style="width: 100%; height: 4%;">
+    <!--breadcrumbs-->
+    <nav>
+        <div class="caminho" style="width: 100%; height: 100%;">
+            <div class="col s12 m12">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("Tipos de Intercâmbio", "IntercambioEscolha", "Home", new { area = "" }, new { @class = "breadcrumb" })
+                @Html.ActionLink("High School", "Intercambio", "Home", new { area = "" }, new { @class = "breadcrumb" })
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Intercâmbio</h1>
+
+        <h4>High School</h4>
+
+        <p class ="paragrafo">
+            O intercâmbio de high school no exterior, é a melhor experiência que um estudando pode ter, ele funciona assim: estudantes brasileiros entre a idade de 15 a 18 anos tem a opção de ir para vários países no exterior entre eles Estados Unidos, Canadá, Alemanha, França, entre outros e ter uma experiência de como é ser um nativo. Nas escolas os estudantes aprendem matemática, geografia, física, química, literatura, entre outras matérias que o aluno pode escolher ao chegar na escola e tudo isso no idioma local. E a parte mais legal é justamente essa, o estudando fica imerso na língua local, e convivendo e vivendo como um local.
+        </p>
+
+        <p class ="paragrafo">
+            Todos os anos vários adolescentes brasileiros que vão para essa experiência no exterior, voltam com o idioma fluentes, seja o francês, italiano, alemão, inglês; mesmo que o adolescente tenha o conhecimento básico ou avançado da língua para onde vai.
+        </p>
+
+        <p class ="paragrafo">
+            Neste tipo de intercâmbio o estudante fica hospedado em casa de família voluntárias, que são previamente selecionadas pela organização. Alguns meses antes do estudante embarcar, ele precisa falar como é o dia a dia dele, como é a relação com a família, e algumas outras informações de como ele é, essas informações são enviadas para as famílias voluntárias para que elas possam escolher o adolescente que mais se encaixa no modo de vida deles. Após isso o futuro intercâmbista recebe a família com quem ele irá ficar nesse 1 ano e assim pode fazer contato e saber como a família é e onde irá ficar.
+        </p>
+
+        <p class ="paragrafo">
+            Para fazer esse intercâmbio é preciso ter entre 15 e 18 anos, precisa passar por um teste de conhecimento de inglês e alcançar uma pontuação, normalmente a pontuação mínima para poder fazer o intercâmbio é o nível básico para o intermediário, para que o estudante possa se comunicar.  Também tem a opção de fazer o ano letivo inteiro ou apenas metade, dependendo do país que for o ano letivo começa em Agosto e Setembro, então é a época que maioria dos estudantes embarcam.
+        </p>
+
+        <p class ="paragrafo">
+            Os preços do intercâmbio vária muito, depende do país, se a escola é particular ou pública e a duração do programa, então o preço varia de R$35 mil a mais de R$55mil. O preço também pode variar se o estudante optar por um estado ou cidade específico, o único problema de escolher é que pode ser que uma família de outro estado ou cidade te escolha.  Para ter mais informações de algum país em específico, como preço ou tirar dúvidas, eu
+            indico os sites abaixo:
+
+            <div class="container">
+                <ul>
+                    <li><a target="_blank" href="http://www.experimento.org.br/estudo/high-school/"><img class="logoexperimento" src="~/Midia/Intercambio/experimento.jpg"/ style="width: 10%; height: 10%;"></a></li>
+                    <li><a target="_blank" href="https://www.stb.com.br/intercambio/high-school"><img class="logoagencia" src="~/imagensite/stb.png"/ style="width: 10%; height: 10%;"></a></li>
+                    <li><a target="_blank" href="https://www.ci.com.br/intercambio/ensino-medio-high-school"><img img id="logoci" src="~/Midia/Intercambio/ci.png" style="width: 10%; height: 15%;"></a></a></li>
+                </ul>
+            </div>
+        </p>
+
+    </div>
+
+    <div class="container">
+        <div class="w3-content w3-section" style="width: 40%; height: 40%; display: flex;">
+            <img class="mySlides" src="~/imagensite/exchange.jpg" style="width: 250%; height: 80%;">
+        </div>
+    </div>
+
+</section>
+
