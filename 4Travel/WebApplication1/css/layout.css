@@ -22,12 +22,12 @@ nav div.nav-wrapper {
 }
 
 h2.titulo{
-    font-family: Verdana;
+    font-family:'Eras ITC';
     text-align:center;
     padding-bottom: 2%;
 }
 span#intercambioTitle{
-    font-stretch: condensed;
+    font-weight:bolder;
 }
 
 label.novoDestinoPais {
