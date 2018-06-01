@@ -22,10 +22,9 @@
 <body>
       <nav>
                 <div class="nav-wrapper">
-                       <a href="index.html" class="brand-logo right">
-                         <img id="aviao4travel" src="~/Midia/aviao4travel.png" />
-
-                       </a>
+                    <a class="brand-logo right" href='@Url.Action("Index", "Home")'>
+                        <img id="aviao4travel" src='@Url.Content("~/Midia/aviao4travel.png")'/>
+                    </a>
                     <ul class="left-hide-on-med-and-down">
                         @Html.ActionLink("Home", "Index", "Home")
 
